@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Concours Mission Lune</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css?20190101" />
+</head>
+<body>
+<div id="wrapper">
+	<!-- #header -->
+	<div id="header" role="banner"><div class="inner">
+		<div class="logo"><a href="https://ici.radio-canada.ca/concours/v3/index.html" target="_blank"><img src="assets/images/logo-concours-radio-canada.jpg" alt="Concours Radio-Canada" height="85" width="137" /></a></div>
+	</div></div>
+	<!-- /#header -->
+	<!-- #main -->
+	<div id="main" role="main"><div class="inner">
+		<form name="formulaireConcours" id="formulaireConcours" action="merci.html" method="post">
+			<h1 class="form-title">Concours Mission Lune</h1>
+			<div class="required"><span class="req">*</span> Champs obligatoires</div>
+
+			<!-- basic -->
+			<div id="basic">
+				<div class="field field-prenom">
+					<div class="field-label"><label for="prenom">Prénom <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="prenom" id="prenom" size="32" maxlength="128" value="" required /></div>
+				</div>
+				<div class="field field-nom">
+					<div class="field-label"><label for="nom">Nom <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="nom" id="nom" size="32" maxlength="128" value="" required /></div>
+				</div>
+				<div class="field field-age">
+					<div class="field-label"><label for="age">Âge <span class="req">*</span></label></div>
+					<div class="field-input">
+						<select name="age" id="age" required>
+							<option value="">-</option>
+							<option value="180">18-24</option>
+							<option value="250">25-34</option>
+							<option value="350">35-44</option>
+							<option value="450">45-54</option>
+							<option value="550">55-64</option>
+							<option value="650">65+</option>
+						</select>
+					</div>
+				</div>
+				<div class="field field-adresse">
+					<div class="field-label"><label for="adresse">Adresse <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="adresse" id="adresse" size="32" maxlength="256" required /></div>
+				</div>
+				<div class="field field-ville">
+					<div class="field-label"><label for="ville">Ville <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="ville" id="ville" size="32" maxlength="64" required /></div>
+				</div>
+				<div class="field field-province">
+					<div class="field-label"><label for="province">Province <span class="req">*</span></label></div>
+					<div class="field-input">
+						<select name="province" id="province" required>
+							<option value="">Sélectionnez&hellip;</option>
+							<option value="AB">Alberta</option>
+							<option value="BC">Colombie-Britannique</option>
+							<option value="PE">Île-du-Prince-Édouard</option>
+							<option value="MB">Manitoba</option>
+							<option value="NB">Nouveau-Brunswick</option>
+							<option value="NS">Nouvelle-Écosse</option>
+							<option value="NU">Nunavut</option>
+							<option value="ON">Ontario</option>
+							<option value="QC">Québec</option>
+							<option value="SK">Saskatchewan</option>
+							<option value="NL">Terre-Neuve-et-Labrador</option>
+							<option value="NT">Territoires du Nord-Ouest</option>
+							<option value="YT">Yukon</option>
+						</select>
+					</div>
+				</div>
+				<div class="field field-codepostal">
+					<div class="field-label"><label for="codepostal">Code postal <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="codepostal" id="codepostal" size="32" maxlength="7" placeholder="ex. H3C 2A5" required /></div>
+				</div>
+				<div class="field field-telephone">
+					<div class="field-label"><label for="telnum">Téléphone de jour <span class="req">*</span></label></div>
+					<div class="field-input"><input type="text" name="telnum" id="telnum" size="32" maxlength="60" placeholder="ex. 514-234-1234" required /></div>
+				</div>
+				<div class="field field-courriel">
+					<div class="field-label"><label for="courriel">Courriel <span class="req">*</span></label></div>
+					<div class="field-input"><input type="email" name="courriel" id="courriel" size="32" maxlength="128" value="" required /></div>
+				</div>
+			</div>
+			<!-- /basic -->
+
+			<!-- CUSTOM FIELDS -->
+			<div id="customs">
+				<label for="reponseIndice">Notez l'indice sur <a href="https://ici.exploratv.ca/" target="_blank">ICI EXPLORA</a> <span class="req">*</span></label>
+				<input type="text" name="reponseIndice" id="reponseIndice" size="32" maxlength="256" required />
+			</div>
+			<!-- /CUSTOM FIELDS -->
+
+			<!-- checkboxes -->
+			<div id="checkboxes">
+				<div class="field field-declaration">
+					<label for="declaration" class="label-checkbox"><input type="checkbox" name="declaration" id="declaration" required /><span class="label-text">J'ai lu et j'accepte le <a href="https://ici.radio-canada.ca/edition/reglement.pdf" target="_blank" title="règlement du concours">règlement du concours</a>. <span class="req">*</span></span></label>
+				</div>
+				<div class="field field-infolettre">
+					<label for="transmettreInfo" class="label-checkbox"><input type="checkbox" name="transmettreInfo" id="transmettreInfo" /><span class="label-text">Je souhaite recevoir des offres et des communications de la part de Radio-Canada.</span></label>
+				</div>
+				<div class="field field-infolettre">
+					<label for="transmettreInfo2" class="label-checkbox"><input type="checkbox" name="transmettreInfo2" id="transmettreInfo2" /><span class="label-text">Je souhaite recevoir des offres et des communications de la part des Éditions MultiMondes.</span></label>
+				</div>
+			</div>
+			<!-- /checkboxes -->
+
+			<div id="submit"><input type="submit" value="Soumettre" /></div>
+		</form>
+	</div></div>
+	<!-- /#main -->
+	<!-- #footer -->
+	<div id="footer" role="contentinfo"><div class="inner">
+		<p>Consultez la <a href="https://cbc.radio-canada.ca/fr/vision/gouvernance/politiques-institutionnelles/secretariat/protection/" target="_blank">Politique de confidentialité</a> concernant les renseignements personnels sur le site web de <span class="nowrap">CBC/Radio-Canada</span>.</p>
+		<p><a href="https://ici.radio-canada.ca/edition/reglement.pdf" target="_blank">Règlement du concours</a> (PDF, 227 KO - nouvelle fenêtre)</p>
+	</div></div>
+	<!-- /#footer -->
+</div>
+</body>
+</html>

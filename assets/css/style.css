@@ -1,0 +1,13 @@
+html, body{ margin: 0; padding: 0; }
+html{ font-family: 'arial', sans-serif; }
+
+.subscribe{}
+.subscribe a{ background: red; color: #fff; display: table; height: 50px; width: 200px; font-weight: bold; padding: 5px 10px; text-decoration: none; text-transform: uppercase; }
+.subscribe a:hover,
+.subscribe a:focus{ background-color: #000; }
+.subscribe .subscribe-opened,
+.subscribe .subscribe-closed{ display: none; vertical-align: middle; text-align: center; }
+.subscribe .subscribe-closed strong{ display: block; }
+.subscribe .subscribe-closed small{ display: block; }
+html[data-form-state="!closed"] .subscribe .subscribe-opened,
+html[data-form-state="closed"] .subscribe .subscribe-closed{ display: table-cell; }

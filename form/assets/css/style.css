@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* RESET
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.2r1
+*/
+html{color:#000;background:#FFF}blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{border:0;margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,optgroup,strong,th,var{font-style:inherit;font-weight:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:after,q:before{content:''}abbr,acronym{border:0;font-variant:normal}sub,sup{vertical-align:baseline}legend{color:inherit}button,input,optgroup,option,select,textarea{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}button,input,select,textarea{font-size:100%}
+
+
+/* BASE
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.2r1
+*/
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}html{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased}body{margin:2em}address,article,aside,audio,blockquote,canvas,dd,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,main,nav,noscript,ol,output,p,pre,section,select,td,textarea,th,ul,video{line-height:inherit}h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}fieldset,h1,h2,h3,p,pre,table{margin:1em 0}caption,dt,h1,h2,h3,h4,h5,h6,strong,th{font-weight:700}optgroup{font-weight:400}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}del{text-decoration:line-through;color:red}blockquote,dl,ol,ul{margin:1em}dl,ol,ul{margin-left:2em}ol li{list-style:decimal}ul li{list-style:disc}td,th{border:0;padding:0}th{text-align:center}caption{margin-bottom:.5em;text-align:left}sup{vertical-align:super}sub{vertical-align:sub}button,input[type=checkbox],input[type=radio],input[type=reset],input[type=submit]{padding:1px}table{border-collapse:collapse}.align-left,td[align=left],th[align=left]{text-align:left!important}.align-center,td[align=center],th[align=center]{text-align:center!important}.align-right,td[align=right],th[align=right]{text-align:right!important}.valign-top,td[valign=top],th[valign=top]{vertical-align:top!important}.valign-middle,td[valign=middle],th[valign=middle]{vertical-align:middle!important}.valign-bottom,td[valign=bottom],th[valign=bottom]{vertical-align:bottom!important}.clear,.clearfix{display:block;clear:both;visibility:hidden;line-height:0;height:0}span.u,sup,u{text-decoration:underline}ins{color:green}small{font-size:.8em}big{font-size:1.2em}sub,sup{font-size:.7em;line-height:1em}div>:first-child,td>:first-child,th>:first-child{margin-top:0}div>:last-child,td>:last-child,th>:last-child{margin-bottom:0}
+
+/* INPUTS */
+input[type=checkbox],input[type=radio]{background:0 0;border:none;cursor:pointer;font-size:1em;height:auto;padding:0;position:relative;top:0}input[type=file]{line-height:normal}input[type=range]{background:0 0;border:none}.input-button,button,input[type=button],input[type=color],input[type=reset],input[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+/**
+ * Fonts
+**/
+@font-face{font-family:RubrikLt;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Light.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Light.eot?#iefix) format('embedded-opentype'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Light.woff) format('woff'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Light.svg#Rubrik-Light) format('svg'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Light.ttf) format('truetype')}@font-face{font-family:RubrikXLt;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-ExtraLight.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-ExtraLight.eot?#iefix) format('embedded-opentype'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-ExtraLight.woff) format('woff'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-ExtraLight.svg#Rubrik-ExtraLight) format('svg'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-ExtraLight.ttf) format('truetype')}@font-face{font-family:Rubrik;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Regular.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Regular.eot?#iefix) format('embedded-opentype'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Regular.woff),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Regular.svg#Rubrik-Regular),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Regular.ttf)}@font-face{font-family:RubrikMd;font-style:normal;font-weight:400;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Medium.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Medium.eot?#iefix) format('embedded-opentype');src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Medium.woff);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Medium.svg#Rubrik-Medium);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Medium.ttf)}@font-face{font-family:RubrikSemBol;font-style:normal;font-weight:400;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-SemiBold.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-SemiBold.eot?#iefix) format('embedded-opentype'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-SemiBold.woff) format('woff'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-SemiBold.svg#Rubrik-SemiBold) format('svg'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-SemiBold.ttf) format('truetype')}@font-face{font-family:RubrikItalic;src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Italic.eot);src:url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Italic.eot?#iefix) format('embedded-opentype'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Italic.woff) format('woff'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Italic.svg#Rubrik-Italic) format('svg'),url(https://ici.radio-canada.ca/Content/_fonts/Rubrik/Rubrik-Italic.ttf) format('truetype')}
+
+/**
+ * BASE
+**/
+html{ color: #000; font-family: 'Open Sans', arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.1666666667; }
+a{ color: inherit; }
+input[type="text"], input[type="tel"], input[type="email"]{ border: 1px solid #b2b2b2; height: 29px; line-height: 29px; padding: 0 10px; width: 100%; }
+input[aria-invalid="true"]{ border-color: red; }
+textarea{ border: 1px solid #b2b2b2; padding: 10px; width: 100%;}
+select{ border: 1px solid #b2b2b2; height: 30px; line-height: 30px; padding: 0 10px; width: 100%; }
+sup, sub { font-size:0.6em; line-height:1; }
+
+.label-checkbox{ min-height: 20px; cursor: pointer; display: block; position: relative; padding-left: 29px; }
+.label-checkbox input{ left: -999em; opacity: 0; position: absolute; }
+.label-checkbox .label-text:before{ background: #fff; border: 1px solid #b2b2b2; color: #fff; content: ''; cursor: pointer; display: block; font-size: 0.8em; font-weight: bold; height: 18px; line-height: 16px; left: 0; position: absolute; top: 0; text-align: center; width: 18px; }
+.label-checkbox input:checked + .label-text:before{ background-color: #000000; border-color: #000000; color: #fff; content: '✓';}
+
+.hide{ left: -9999em; position: absolute; top: -9999em; }
+.field{ margin-bottom: 6px; }
+.field-label{ font-weight: bold; margin-bottom: 5px; }
+.field-input{ position: relative; }
+.field-alert{ background: red; color: #fff;  display: none; font-size: 11px; line-height: 1; padding: 5px 5px; position: absolute; top: 35px; left: 0; }
+.field-alert:before { content:""; display: block; position: absolute; left: 20px; top: -5px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid red; }
+.red{ color: #dc0000; }
+.req{ color: red; }
+.nowrap, .texteNoWrap{ white-space: nowrap; }
+.sup, .texteFauxExposant { display:inline-block; margin-top:-4px; vertical-align:super; font-size:90%; text-transform:lowercase; font-variant:normal; }
+.notransform, .texteNoTransform { text-transform:none; }
+
+
+/**
+ * LAYOUT
+**/
+html, body{ margin: 0; padding: 0; overflow-x: hidden; }
+.inner{ margin: 0 auto; position: relative; }
+#wrapper{ padding: 39px 45px 35px 45px; width: 674px; }
+#header{ margin-bottom: 38px; }
+#header .logo{}
+#main{ margin-bottom: 38px;}
+#main h1{ font-size: 40px; font-weight: 300; line-height: 1; margin: -15px 0 -5px 0; }
+#main .form-title{ margin-bottom: 1em; }
+#main .required{ font-size: 14px; line-height: 20px; left: 200px; position: absolute; top: -61px; }
+#footer{ font-size: 11px; line-height: 15px; }
+#footer .inner{ border-top: 1px solid #b2b2b2; padding-top: 32px; }
+#demo{ background: #000; color: #fff; margin-top: 80px; padding: 5px 10px; }
+#demo a{ color: inherit; }
+	/**
+	body{ opacity: 0.5; }
+	html{ background: url(../../demo/formulaire-formulaire.jpg) no-repeat; }
+	html{ background: url(../../demo/formulaire-participation.jpg) no-repeat; }
+	/**/
+
+
+/* BASIC */
+#basic{}
+#basic:after{ clear: both; content: ''; display: block; height: 0; }
+#basic .field-prenom{ float: left; margin-right: 16px; width: 284px; }
+#basic .field-nom{ float: left; margin-right: 8px; width: 194px; }
+#basic .field-age{ float: left; width: 81px; }
+#basic .field-adresse{ clear: left; float: left; margin-right: 16px; width: 284px; }
+#basic .field-ville{ float: left; width: 284px; }
+#basic .field-province{ clear: left; float: left; margin-right: 16px; width: 284px; }
+#basic .field-codepostal{ float: left; width: 284px; }
+#basic .field-codepostal input{ text-transform: uppercase; }
+#basic .field-codepostal input::placeholder{ text-transform: none; }
+#basic .field-codepostal input[aria-invalid="true"] + .field-alert{ display: block; }
+#basic .field-telephone{ clear: left; float: left; margin-right: 16px; width: 284px; }
+#basic .field-telephone input[aria-invalid="true"] + .field-alert{ display: block; }
+#basic .field-courriel{ float: left; width: 284px; }
+
+/* CUSTOMS */
+#customs{ margin: 40px 0; }
+#customs label, #customs .classQuestion, #customs .uploadNom{ font-weight: bold; display: block; margin: 20px 0 10px 0; }
+#customs input[type="checkbox"], #customs input[type="radio"]{ margin-right: 5px; position: relative; top: 2px; }
+#customs .Num{ display: none; }
+#customs .field, #customs .classReponse{ margin-bottom: 4px;  }
+#customs .field:last-child{ margin-bottom: 0; }
+#customs .field-input-radio{}
+#customs .field-input-radio .classReponse input{ margin-right: 0.5em; width: auto; }
+
+/* CHECKBOXES */
+#checkboxes{ margin: 30px 0; }
+#checkboxes .field{ margin-bottom: 15px; }
+#checkboxes .field:last-child{ margin-bottom: 0; }
+#checkboxes .label-text{ font-size: 11px; line-height: 1; }
+
+/* SUBMIT */
+#submit{}
+#submit input{ background-color: #dc0000; border: 0; border-radius: 8px; color: #fff; cursor: pointer; display: block; font-size: 18px; font-weight: bold; height: 54px; line-height: 58px; padding: 0; text-transform: uppercase; width: 202px; }
+#submit input:hover{ background-color: #000; }
+
+/**
+ * TPL
+**/
+#main .message{ font-size: 20px; line-height: 1.125; }
+#main .message-error{}
+#main .message-formular-closed{}
+#main .message-formular-confirm{}
+#main .message-formular-inactive{}
+#main .message-illegal{}
+
+#main .winners{ border-top: 1px solid #b2b2b2; color: #dc0000; font-size: 14px; line-height: 18px; margin-top: 32px; padding-top: 32px; }
+#main .winners ul{ margin-left: 0; padding-left: 0; }
+#main .winners li{ font-weight: bold; list-style: none; margin-left: 0; padding-left: 0; }
+
+
+/**
+ * RESPONSIVE
+**/
+@media only screen and (max-width: 670px), only screen and (device-max-width: 670px){
+	#wrapper{ padding: 35px 20px 35px 20px; width: auto; }
+	#main h1{ font-size: 30px; }
+	#main .required{ margin-bottom: 20px; position: static; }
+	#basic .field-prenom{ float: none; margin-right: 0; width: auto; }
+	#basic .field-nom{ margin-right: 2%; width: 68%; }
+	#basic .field-age{ width: 30%; }
+	#basic .field-adresse,
+	#basic .field-ville,
+	#basic .field-province,
+	#basic .field-codepostal,
+	#basic .field-telephone,
+	#basic .field-courriel{ float: none; margin-right: 0; width: 100%; }
+	#main .message{ font-size: 16px; }
+	#main .winners{ font-size: 14px; }
+}

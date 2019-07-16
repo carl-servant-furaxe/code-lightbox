@@ -1,0 +1,15 @@
+/**
+ * LIGHTBOX
+**/
+#lightbox{ display: none; background:0 0;height:100%;left:0;padding:0;position:fixed;top:0;width:100%;z-index:999}
+#lightbox .lightbox-overlay{background:url(../images/lightbox-overlay.png);background:rgba(0,0,0,.8);bottom:0;left:0;position:fixed;right:0;top:0;z-index:9999}
+#lightbox .lightbox-content{background:#fff;bottom:20px;left:50%;margin-left:-345px;padding:0;position:fixed;top:20px;width:690px;z-index:99999}
+#lightbox #lightbox-content{ height: 100%; width: 100%; }
+#lightbox #lightbox-content iframe{border:0;display:block;height:100%;overflow-x:hidden!important;overflow-y:scroll;width:100%}
+#lightbox .lightbox-content{-webkit-overflow-scrolling:touch!important;-moz-overflow-scrolling:touch!important;overflow-scrolling:touch!important;overflow:none!important}
+#lightbox .lightbox-close{background:url(../images/lightbox-close.png) no-repeat;border:1px solid #666;cursor:pointer;display:block;height:42px;overflow:hidden;position:fixed;text-indent:-999em;right:10px;top:10px;width:42px;z-index:99999}
+#lightbox .lightbox-close:hover{background-color:#fff}
+.is-lightbox,.is-lightbox body{height:100%;margin:0;overflow-x:hidden;padding:0}
+.is-lightbox{-webkit-overflow-scrolling:auto!important;-moz-overflow-scrolling:auto!important;overflow-scrolling:auto!important;overflow:hidden!important}
+.is-lightbox body{position:relative}
+.is-lightbox #lightbox{display:block;}
