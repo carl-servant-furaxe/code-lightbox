@@ -13,3 +13,10 @@
 .is-lightbox{-webkit-overflow-scrolling:auto!important;-moz-overflow-scrolling:auto!important;overflow-scrolling:auto!important;overflow:hidden!important}
 .is-lightbox body{position:relative}
 .is-lightbox #lightbox{display:block;}
+
+
+#lightbox[data-layout="toutv-player"] .lightbox-overlay{ background: #000; }
+#lightbox[data-layout="toutv-player"] .lightbox-content{ background: transparent; left: 80px; top: 80px; right: 80px; bottom: 80px; margin: 0;  width: auto; }
+@media (max-width: 767px){
+	#lightbox[data-layout="toutv-player"] .lightbox-content{ left: 40px; top: 40px; right: 40px; bottom: 40px; }
+}
