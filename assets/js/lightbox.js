@@ -23,7 +23,7 @@
 
 
 	$(document).on('click', 'a[data-lightbox]', function(){
-		if($(window).width() < 1024) return true;
+		if($(window).width() <= 1024) return true;
 		modal_trigger = $(this);
 		var layout = $(this).attr('data-lightbox');
 		var url = $(this).attr('href');
